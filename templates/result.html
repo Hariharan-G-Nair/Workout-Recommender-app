@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Workout Recommendations</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1{
+            color: #00ff99;
+        }
+
+        .card{
+            width: 400px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        li{
+            background: #333;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            background: #00aa66;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        a:hover{
+            background: #00cc77;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>Recommended Workouts</h1>
+
+        <h3>
+            Based on:
+            {{ workout }}
+        </h3>
+
+        <ul>
+
+            {% for item in recommendations %}
+
+                <li>
+                    {{ item }}
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+        <br>
+
+        <a href="/">
+            Go Back
+        </a>
+
+    </div>
+
+</body>
+
+</html>
